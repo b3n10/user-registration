@@ -8,6 +8,6 @@ $db_name = "user_registration";
 if (isset($_POST["submit"])) {
 	mysqli_connect($db_host, $db_user, $db_password, $db_name);
 } else {
-	header("Location: ../index.php");
+	header("Location: ../index.php?error=page not allowed");
 	exit();
 }
