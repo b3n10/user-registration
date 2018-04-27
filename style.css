@@ -17,7 +17,8 @@
 	margin: 0 auto;
 }
 .user-input form input,
-.user-input form button {
+.user-input form button,
+.user-input form p {
 	width: 100%;
 	padding: 5px;
 	margin-top: 7px;
