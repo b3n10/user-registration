@@ -31,9 +31,15 @@
 	color: #fff;
 	border: none;
 }
-.registration-message p {
+.reg-error-msg p {
 	margin: 0;
 	background-color: red;
+	color: #fff;
+	text-align: center;
+}
+.reg-success-msg p {
+	margin: 0;
+	background-color: green;
 	color: #fff;
 	text-align: center;
 }
