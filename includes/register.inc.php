@@ -26,4 +26,5 @@ if (empty($uname) || empty($emadd) || empty($pword) || empty($cpword)) {
 	$sql = "INSERT INTO users (username, email_address, password)
 					VALUES ($uname, $emadd, $encrypt_pword);";
 	mysqli_query($conn, $sql);
+	header("Location: ../register.php?reg_success=Record Saved!");
 }
