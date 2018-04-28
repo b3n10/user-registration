@@ -18,20 +18,8 @@ $error_array = array();
 			save to db
 */
 
-function display_errors($err) {
-	$errors = "";
-	$count_err = 0;
-	foreach ($err as $a) {
-		$count_err++;
-		$comma = ($count_err > 1) ? ", " : "";
-		$errors = $errors . $comma . $a;
-	}
-	return $errors;
-}
-
-if (empty($uname)) { array_push($error_array, "Username"); }
-if (empty($emadd)) { array_push($error_array, "E-mail Address"); }
-if (empty($pword)) { array_push($error_array, "Password"); }
-if (empty($cpword)) { array_push($error_array, "Confirm Password"); }
 // redirect if missing
-if (count($error_array)) { header("Location: ../register.php?reg_error=Missing: " . display_errors($error_array) . ""); }
+if (empty($uname) || empty($emadd) || empty($pword) || empty($cpword)) {
+	header("Location: ../register.php?reg_error=Missing Input(s)!");
+} else {
+}
