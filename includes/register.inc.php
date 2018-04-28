@@ -22,4 +22,8 @@ $error_array = array();
 if (empty($uname) || empty($emadd) || empty($pword) || empty($cpword)) {
 	header("Location: ../register.php?reg_error=Missing Input(s)!");
 } else {
+	$encrypt_pword = md5($pword);
+	$sql = "INSERT INTO users (username, email_address, password)
+					VALUES ($uname, $emadd, $encrypt_pword);";
+	mysqli_query($conn, $sql);
 }
