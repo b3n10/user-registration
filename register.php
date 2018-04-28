@@ -1,7 +1,12 @@
 <?php
-	$title = "User Registration";
-	$heading = "Register";
-	require_once "header.php";
+$title = "User Registration";
+$heading = "Register";
+require_once "header.php";
+
+if (isset($_SESSION["username"])) {
+	header("Location: ./");
+	exit();
+}
 ?>
 <div class="reg-error-msg">
 	<?php if (isset($_GET["reg_error"])): ?>
@@ -15,7 +20,7 @@
 </div>
 	<div class="user-input">
 		<form action="includes/register.inc.php" method="POST">
-			<input type="text" name="reg_username" placeholder="Username">
+		<input type="text" name="reg_username" placeholder="Username">
 			<input type="text" name="reg_email" placeholder="Email address">
 			<input type="password" name="reg_password" placeholder="Password">
 			<input type="password" name="reg_confirm_password" placeholder="Confirm Password">
