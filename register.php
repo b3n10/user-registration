@@ -3,9 +3,14 @@
 	$heading = "Register";
 	require_once "header.php";
 ?>
-<div class="registration-message">
+<div class="reg-error-msg">
 	<?php if (isset($_GET["reg_error"])): ?>
 		<p><?php echo $_GET["reg_error"]; ?></p>
+	<?php endif ?>
+</div>
+<div class="reg-success-msg">
+	<?php if (isset($_GET["reg_success"])): ?>
+		<p><?php echo $_GET["reg_success"]; ?></p>
 	<?php endif ?>
 </div>
 	<div class="user-input">
