@@ -12,14 +12,14 @@
 	line-height: 50px;
 }
 
-.user-input {
+.user-input,
+.welcome-msg {
 	width: 80%;
 	margin: 0 auto;
 }
 .user-input form input,
 .user-input form button,
-.user-input form p,
-.registration-message p {
+.user-input form p {
 	width: 100%;
 	padding: 5px;
 	margin-top: 7px;
@@ -30,16 +30,42 @@
 	background-color: #5dcc26;
 	color: #fff;
 	border: none;
+	transition: background-color 0.5s;
+}
+.user-input form button:hover {
+	background-color: #5dcc26c4;
+}
+
+.reg-error-msg p,
+.reg-success-msg p {
+	width: 100%;
+	padding: 5px;
+	line-height: 20px;
+	font-size: 18px;
+	margin: 0;
+	color: #fff;
+	text-align: center;
+	transition: background-color 2s;
 }
 .reg-error-msg p {
-	margin: 0;
 	background-color: red;
-	color: #fff;
-	text-align: center;
 }
 .reg-success-msg p {
-	margin: 0;
 	background-color: green;
-	color: #fff;
+}
+
+.welcome-msg {
+	margin-top: 20px;
+	border: 1px solid blue;
+	background-color: lightblue;
+	border-radius: 3px;
+	line-height: 50px;
+	padding: 10px;
+}
+.welcome-msg h1 {
 	text-align: center;
+}
+.welcome-msg p {
+	text-align: right;
+	padding-right: 20px;
 }
